@@ -40,11 +40,10 @@ module.exports = class extends Generator {
       this.destinationPath('./')
     );
     // 下面文件默认不能直接应用在新项目里，故指定复制一份
-    // const specFileList = ['.stylelintrc.js', '.eslintrc.js','.prettierrc.js','.gitignore','.prettierignore']
-    const specFileList = []
-    specFileList.forEach(file => {
-      this.fs.copy(this.templatePath(file), this.destinationPath(file));  
-    })
+    this.fs.copy(
+      this.templatePath('.*'),
+      this.destinationRoot()
+    );
     // 改写package.json
     this.initPackage();
   }

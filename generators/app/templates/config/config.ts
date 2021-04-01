@@ -3,6 +3,7 @@ import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
 import routes from './routes';
+import uedConfig from '@hzero-front-ui/cfg/lib/utils/uedConfig';
 
 const { REACT_APP_ENV } = process.env;
 
@@ -12,8 +13,12 @@ export default defineConfig({
   dva: {
     hmr: true,
   },
+  presets: [
+    require.resolve('@c7n-umi/preset-react'),
+    // 'hzero-cli-preset-ui',
+  ],
   layout: {
-    name: 'Ant Design Pro',
+    name: 'C7N Pro',
     locale: true,
     siderWidth: 208,
     ...defaultSettings,
@@ -26,7 +31,7 @@ export default defineConfig({
     baseNavigator: true,
   },
   dynamicImport: {
-    loading: '@ant-design/pro-layout/es/PageLoading',
+    loading: '@choerodon-ui/pro-layout/es/PageLoading',
   },
   targets: {
     ie: 11,
@@ -45,4 +50,8 @@ export default defineConfig({
     basePath: '/',
   },
   exportStatic: {},
+  extraBabelPlugins: [
+    //@ts-ignore
+    ...uedConfig.generateC7nUiConfig(),
+  ],
 });

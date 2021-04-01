@@ -1,4 +1,4 @@
-import { Button, message, notification } from 'antd';
+import { Button, message, notification } from 'choerodon-ui';
 
 import React from 'react';
 import { useIntl } from 'umi';
@@ -75,7 +75,7 @@ if (pwa) {
   });
 
   // remove all caches
-  if (window.caches && window.caches.keys) {
+  if (window.caches && window?.caches?.keys()) {
     caches.keys().then((keys) => {
       keys.forEach((key) => {
         caches.delete(key);

@@ -1,6 +1,6 @@
 export default {
   'pages.layouts.userLayout.title':
-    'Ant Design is the most influential web design specification in Xihu district',
+    'The Choerodon UI is used to develop and service enterprise backend products',
   'pages.login.accountLogin.tab': 'Account Login',
   'pages.login.accountLogin.errorMessage': 'Incorrect username/password（admin/ant.design)',
   'pages.login.username.placeholder': 'Username: admin or user',
@@ -9,10 +9,13 @@ export default {
   'pages.login.password.required': 'Please input your password!',
   'pages.login.phoneLogin.tab': 'Phone Login',
   'pages.login.phoneLogin.errorMessage': 'Verification Code Error',
+  'pages.login.phoneLogin.china': 'Chinese mainland',
   'pages.login.phoneNumber.placeholder': 'Phone Number',
   'pages.login.phoneNumber.required': 'Please input your phone number!',
   'pages.login.phoneNumber.invalid': 'Phone number is invalid!',
   'pages.login.captcha.placeholder': 'Verification Code',
+  'pages.login.captcha.success':
+    'Get the verification code successfully! The verification code is: 1234',
   'pages.login.captcha.required': 'Please input verification code!',
   'pages.login.phoneLogin.getVerificationCode': 'Get Code',
   'pages.getCaptchaSecondText': 'sec(s)',
@@ -21,4 +24,16 @@ export default {
   'pages.login.submit': 'Login',
   'pages.login.loginWith': 'Login with :',
   'pages.login.registerAccount': 'Register Account',
+  'pages.login.userName': 'username',
+  'pages.login.userPassword': 'password',
+  'pages.login.phoneNumber': 'phone number',
+  'pages.login.phoneCaptcha': 'Captcha',
+  'pages.login.success': 'Login successful',
+  'pages.login.fail': 'Login failed',
+  'pages.welcome.description':'Refined from the concept of lowCode, a component library serving front-end performance is welcome to try',
+  'pages.welcome.advanced': 'Table, Form and other heavy components, combined with umi performance tools + performance component library, the icing on the cake',
+  'pages.welcome.everyWhere': 'dataSet One set of configuration for multiple components',
+  'pages.welcome.localUrl': ' choerodon-ui website address',
+  'pages.admin.look':'This page can only be viewed with admin privileges',
+  'pages.admin.umi':'Umi ui is now released, welcome to use npm run ui to start the experience.',
 };
